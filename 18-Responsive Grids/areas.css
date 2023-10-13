@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 1rem;
+    background-color: rgb(85, 80, 80);
+    padding: 4rem;
+    /* 
+        matrix area for each cell where our column goes
+        3x4  column x row
+        grid-area names
+    */
+    grid-template-areas: 
+        "header header header"
+        "sidebar content1 content1"
+        "sidebar content2 content3"
+        "footer footer footer"
+    ;
+}
+.item{
+    background-color: rgb(106, 106, 137);
+    border: 2px solid black;
+    padding: 1rem;
+    color: whitesmoke;
+}
+#header{
+    grid-area: header;
+
+}
+#sidebar{
+    grid-area: sidebar;
+}
+#content1{
+    grid-area: content1;
+}
+#content2{
+    grid-area: content2;
+}
+#content3{
+    grid-area: content3;
+}
+#footer{
+    grid-area: footer;
+}
