@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Box and Text Shadow</title>
+        <style>
+            :root{
+                /* root element configuration */
+                --primary-color: blue; /* custom variables */
+            }
+            .container{
+                border: 1px solid black;
+                margin: 2px;
+                padding: 2px;
+                background-color: bisque;
+                height: 650px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .box{
+                border: 1px solid black;
+                margin: 2px;
+                padding: 2px;
+                background-color: aquamarine;
+                width: 330px;
+                height: 330px;
+                /* box-shadow: 10px 10px brown; x-offset y-offset color (negative means opposite) */
+                /* box-shadow: 10px 10px 5px brown; blur radius */
+                box-shadow: 10px 10px 5px 5px var(--primary-color); /* spread radius */
+            }
+
+            #head1{
+                text-shadow: white 12px 13px 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <img src="download.jpg">
+                <h2 id="head1">Welcome to Shadows</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, cupiditate ipsum atque explicabo harum eius natus illo autem excepturi magnam corrupti nihil, recusandae soluta illum?</p>
+            </div>
+        </div>
+    </body>
+</html>

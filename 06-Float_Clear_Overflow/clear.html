@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clear</title>
+        <style>
+            .box{
+                border: 1px solid black;
+                overflow: auto; /* will save overflow due to float*/
+            }
+            .item{
+                width: 200px;
+                height: 200px;
+                margin: 2px;
+                background-color: aquamarine;
+                border: 1px solid black;
+                float: left; /* will cause gate collapse--> parent box becomes single place
+                        all are OVERFLOW from parent */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+    </body>
+</html>

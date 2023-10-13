@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- movement between various states of style -->
+        <title>Animations</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                width: 100vw;
+                height: 100vh;
+                background-color: beige;
+                border: 5px solid black;
+            }
+            .box{
+                width: 350px;
+                height: 80px;
+                background-color: blue;
+                border-radius: 10px;
+                margin: 10px;
+                border: 3px solid red;
+                position: relative;
+                animation-name: rightMovement; /* name of animation to be applied */
+                animation-duration: 5s; /* duration of each animation*/
+                animation-iteration-count: infinite; /* number of times animation occurs */
+                animation-delay: 2s; /* initial delay*/
+                /* with bezier curve also */
+                animation-timing-function: linear; /* how the speed of animation varies */
+                animation-direction: alternate; /* movement of  animation */
+                /* animation-fill-mode: forwards; before and after animation ends or starts */
+            }
+            #box2{
+                width: 350px;
+                height: 80px;
+                background-color: blue;
+                border-radius: 10px;
+                margin: 10px;
+                border: 3px solid red;
+                position: relative;
+                animation-name: leftMovement; /* name of animation to be applied */
+                animation-duration: 5s; /* duration of each animation*/
+                animation-iteration-count: infinite; /* number of times animation occurs */
+                animation-delay: 2s; /* initial delay*/
+                /* with bezier curve also */
+                animation-timing-function: linear; /* how the speed of animation varies */
+                animation-direction: alternate; /* movement of  animation */
+                /* animation-fill-mode: forwards; before and after animation ends or starts */
+            }
+            /* Defining animation using keyframes -- animation-name */
+            @keyframes rightMovement {
+                /* source CSS */
+                from{
+                    top: 0;
+                    left: 0;
+                }
+                /* destination CSS */
+                to{
+                    top: 0;
+                    left: 1200px;
+                }
+            }
+            /* Defining animation using keyframes -- animation-name */
+            @keyframes leftMovement {
+                /* source CSS */
+                from{
+                    top: 500px;
+                    left: 1200px;
+                }
+                /* destination CSS */
+                to{
+                    top: 500px;
+                    left: 0;
+                }
+            }
+            #circle{
+                width: 50px;
+                height: 50px;
+                background-color: yellow;
+                border-radius: 50px;
+                margin: 10px;
+                border: 3px solid red;
+                position: relative;
+                top: 30%;
+                left: 40%;
+                /* short-hand */
+                animation: 10s ease-in-out 0s infinite alternate none running pingPong;
+            }
+            @keyframes pingPong {
+                /* 4 states */
+                0%{
+                    top: 1%;
+                    left: 5%;
+                }
+                30%{
+                    top: 5%;
+                    left: 90%;
+                }
+                60%{
+                    top: 70%;
+                    left: 10%;
+                }
+                100%{
+                    top: 75%;
+                    left: 90%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+
+            </div>
+            <div id="circle"></div>
+            <div id="box2">
+
+            </div>
+            
+
+        </div>
+    </body>
+</html>

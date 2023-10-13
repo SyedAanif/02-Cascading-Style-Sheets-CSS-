@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic CSS</title>
+
+        <!-- STYLE TAG -->
+        <!-- INTERNAL CSS -->
+        
+        <style>
+            /* selector{property:value} */
+            /* selectors:
+                    1. Element p,h1,article etc
+                    2. ID #
+                    3. Class .
+                    4. Group , */
+            h1{
+                color: green;
+            }
+
+            p{
+                background-color: aqua;
+            }
+        </style>
+        <!-- Precedence of conflict, INLINE > INTERNAL or EXTERNAL -->
+        <!-- override with !important -->
+        <!-- ORDER OF STYLING MATTERS -->
+
+        <!-- LINK EXTERNAL CSS -->
+        <link rel="stylesheet" href="external.css">
+    </head>
+    <body>
+        <h1>Welcome to CSS</h1>
+
+        <!-- INLINE CSS -->
+        <p style="background-color: yellowgreen;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Corporis ipsam qui porro quam earum, 
+            sit repellendus assumenda labore quo maiores.</p>
+
+        <p style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Odit natus veritatis, libero sed ipsa possimus vel quas labore 
+             culpa deserunt totam necessitatibus eligendi doloribus ipsam saepe ex, 
+             ab aspernatur repudiandae.</p>
+            
+        <p>Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. Qui laudantium ea, ipsum enim 
+            non suscipit eveniet itaque laborum! Consequatur nostrum quas, reiciendis 
+            dolor quisquam ea? Sit quaerat rem delectus reprehenderit exercitationem 
+            tempore modi distinctio dolore alias quam, perferendis odio consectetur 
+            officiis suscipit dolores dolor. 
+            Architecto pariatur consectetur corporis assumenda voluptatum.</p>
+
+        <footer>I am footer</footer>
+        
+    </body>
+</html>

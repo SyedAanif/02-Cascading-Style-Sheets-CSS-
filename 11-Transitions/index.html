@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- switch from one state of styling to another; src to dest switch -->
+        <!-- on hover or some pseudo-classes(:hover or :active) -->
+        <title>Transitions</title>
+        <style>
+            .box{
+                height: 400px;
+                width: 400px;
+                background-color: bisque;
+                border: 2px solid black;
+                /* property to apply transition on */
+                transition-property: width;
+                /* duration of transition */
+                transition-duration: 4s;
+                /* initial delay of transition */
+                transition-delay: 2s;
+                /* timing func of transition */
+                transition-timing-function: linear;
+            }
+            /* On hover over the element apply this styling */
+            /* pseudo class */
+            .box:hover{
+                /* smooth transition only on this */
+                width: 700px;
+                /* this will happen instantaneously */
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+
+        </div>
+        
+    </body>
+</html>

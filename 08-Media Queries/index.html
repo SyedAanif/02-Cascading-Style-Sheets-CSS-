@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Media Queries</title>
+        <!-- Apply CSS styling as per the size of the view-port. Responsiveness -->
+    </head>
+    <style>
+        .box{
+            background-color: aquamarine;
+            height: 400px;
+            width: 400px;
+            border: 3px solid black;
+        }
+        /* Change styling as per the query  */
+        @media (min-width: 300px) and (max-width: 500px) {
+            .box{
+                background-color: green;
+            }
+        }
+    </style>
+    <body>
+        <div class="box">
+            Welcome All
+        </div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display Property and Border Box</title>
+        <style>
+            /* Universal Selector */
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box; /* Makes content shrink but doesn't padding etc disturb */
+            }
+
+            div{
+                border: 1px solid red;
+                height: 200px;
+                width: 250px;
+                margin: 20px;
+                padding: 20px;
+            }
+            .box{
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+                padding: 100px;
+            }
+
+            span{
+                border: 2px solid greenyellow;
+                /* height: 200px; Don't apply
+                width: 300px; */
+                /* display: block; */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- BLOCK ELEMENT:
+            1. Come in separate lines
+            2. Take whole width of view port
+            3. Can take custom height-width-margin-padding
+            ex: div, p, h1 etc
+            4. disply: inline; can make it inline element
+        -->
+        <div>
+            Welcome to Display Property
+        </div>
+
+        <div>
+            Welcome to Display Property 2
+        </div>
+
+        <!-- BOX-SIZING -->
+        <div class="box">
+            Lorem ipsum dolor sit amet.
+        </div>
+
+        <!-- INLINE ELEMENT 
+            1. Come in same line.
+            2. Don't take whole view-port
+            3. Can't apply height-width-margin
+            4. display: block will make it block element
+        -->
+        <span>
+            This is an inline element.
+        </span>
+
+        <span>
+            This is an inline element 2.
+        </span>
+
+        <!-- INLINE-BLOCK
+            1. behaves like inline element but we can set custom height-width
+        -->
+    </body>
+</html>

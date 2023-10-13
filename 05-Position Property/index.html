@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Position Property</title>
+        <style>
+            div{
+                border: 1px solid black;
+            }
+            /* Good practice is to mark closest related ancestor
+                as relative. Then internals can be absolute w.r.t this ancestor */
+
+            .container{
+                position: relative;
+                height: 8000px;
+                background-color: aquamarine;
+            }
+            img{
+                margin: 10px;
+            }
+            .img2{
+                top: 100px; /* won't work until position is changed from static */
+                position: relative; /* w.r.t current working window*/
+                right: 200px;
+            }
+            .img3{
+                position: absolute; /* w.r.t closest ancestor*/
+                top: 100px;
+            }
+            .img4{
+                position: fixed; /* always fixed */
+                /* position: sticky;  w.r.t current container*/
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <img class="img1" src="download.jpg" height="250px" width="250px">
+            <img class="img2" src="fsd.png" height="250px" width="250px">
+            <img class="img3" src="Full_Stack.png" height="250px" width="250px">
+            <img class="img4" src="full-stack-web-developer.png" height="250px" width="250px">
+        </div>
+    </body>
+</html>
